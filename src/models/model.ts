@@ -3,6 +3,6 @@ export interface Friend {
     firstname: string;
     lastname: string;
     nickname: string;
-    birthDate: string;
+    birthDate: number;
     picture: string;
   }
