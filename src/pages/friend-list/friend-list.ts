@@ -4,12 +4,6 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { FriendRestProvider } from '../../providers/friendrest/friendrest';
 
-/**
- * Generated class for the FriendListPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @Component({
   selector: 'page-friend-list',
@@ -25,7 +19,7 @@ export class FriendListPage {
 
   ionViewWillEnter(){
     this.category=this.navParams.get("category");
-    this.Friendrest.getFriendlist().subscribe(data=>{
+    this.Friendrest.getFriendsList().subscribe(data=>{
         this.Friend=data.filter(Friend =>Friend.category === this.category)
     });
   }
@@ -34,13 +28,13 @@ export class FriendListPage {
     console.log('ionViewDidLoad FriendListPage');
   }
 
+
+  showDetail(studentd:number){
+    this.navCtrl.push(FriendDetailPage,
+      {studentd:studentd}
+      );
+  }
   goBack(){
     this.navCtrl.pop();
-  }
-
-  showDetail(bookid:number){
-    this.navCtrl.push(FriendDetailPage,
-      {studentid:studentid}
-      );
   }
 }
