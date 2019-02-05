@@ -33,7 +33,7 @@ import { FriendRestProvider } from '../providers/friendrest/friendrest';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
     FriendRestProvider
   ]
 })

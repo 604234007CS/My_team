@@ -29,9 +29,9 @@ export class FriendListPage {
   }
 
 
-  showDetail(studentd:number){
+  showDetail(studentId:number){
     this.navCtrl.push(FriendDetailPage,
-      {studentd:studentd}
+      {studentId:studentId}
       );
   }
   goBack(){
