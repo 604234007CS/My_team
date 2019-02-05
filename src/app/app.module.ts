@@ -31,6 +31,7 @@ import { FriendRestProvider } from '../providers/friendrest/friendrest';
     FriendDetailPage
   ],
   providers: [
+    HttpClientJsonpModule,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
