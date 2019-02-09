@@ -11,7 +11,7 @@ export class HomePage {
   constructor(public navCtrl: NavController) {
 
   }
-  showBookList(major:string){
+  showFriendList(major:string){
     this.navCtrl.push(FriendListPage,
       {major:major}
       );
