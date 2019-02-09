@@ -7,8 +7,8 @@ import { FriendListPage } from '../pages/friend-list/friend-list';
 import { FriendDetailPage } from '../pages/friend-detail/friend-detail';
 import { StatusBar } from '@ionic-native/status-bar';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientJsonpModule } from '@angular/common/http';
 import { FriendRestProvider } from '../providers/friendrest/friendrest';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -19,7 +19,7 @@ import { FriendRestProvider } from '../providers/friendrest/friendrest';
     FriendDetailPage
   ],
   imports: [
-    HttpClientJsonpModule,
+    HttpClientModule,
     BrowserModule,
     IonicModule.forRoot(MyApp)
   ],
@@ -31,7 +31,7 @@ import { FriendRestProvider } from '../providers/friendrest/friendrest';
     FriendDetailPage
   ],
   providers: [
-    HttpClientJsonpModule,
+    HttpClientModule,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},

@@ -16,21 +16,22 @@ import { FriendRestProvider } from '../../providers/friendrest/friendrest';
 })
 export class FriendDetailPage {
 
-  studentId:number;
+  studentID:number;
   friend:Friend;
 
   constructor(public Friendrest:FriendRestProvider,public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewillEnter(){
-    this.studentId=this.navParams.get("studentId");
+    this.studentID=this.navParams.get("studentID");
     this.Friendrest.getFriendsList().subscribe(data=>{
-      this.friend=data.filter(friend => friend.studentId === this.studentId)[0];
+      this.friend=data.filter(friend => friend.studentID === this.studentID)[0];
     });
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad FriendDetailPage');
+    this.studentID=this.navParams.get("studentID");
+    console.log(this.studentID);
   }
   
   goBack(){

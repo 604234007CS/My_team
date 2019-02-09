@@ -15,12 +15,13 @@
           <img  height="200px" src="{{ friend.picture }}" />
   
           <ion-list >
-              <ion-item><strong>studentId:</strong>{{ friend.studentId }} </ion-item>
-              <ion-item><strong>Name:</strong> {{ friend.firstName }} </ion-item>
-              <ion-item><strong>LastName:</strong> {{ friend.lastName }} </ion-item>
-              <ion-item><strong>nickname:</strong> {{ friend.nickname }} </ion-item>
-              <ion-item><strong>birthDate:</strong> {{ friend.birthDate }} </ion-item>
-              <ion-item><strong>picture:</strong> {{ friend.picture }} </ion-item>
+            <ion-item><strong>studentId:</strong>{{ friend.studentId }} </ion-item>
+            <ion-item><strong>Name:</strong> {{ friend.firstName }} </ion-item>
+            <ion-item><strong>LastName:</strong> {{ friend.lastName }} </ion-item>
+            <ion-item><strong>NickName:</strong> {{ friend.NickName }} </ion-item>
+            <ion-item><strong>faculty:</strong> {{ friend.faculty }} </ion-item>
+            <ion-item><strong>major:</strong> {{ friend.major }} </ion-item>
+            <ion-item><strong>birthday:</strong> {{ friend.birthday|date:'dd/MM/yyyy' }} </ion-item>
 
 
           </ion-list>
