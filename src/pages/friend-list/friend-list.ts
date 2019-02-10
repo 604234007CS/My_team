@@ -11,29 +11,29 @@ import { FriendRestProvider } from '../../providers/friendrest/friendrest';
 })
 export class FriendListPage {
 
-  Friends:Friend;
+  friends:Friend;
   major:string;
 
-  constructor(private Friendrest:FriendRestProvider,public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private friendrest:FriendRestProvider,public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad FriendListPage');
+    console.log('ionViewDidLoad FriendlistPage');
   }
 
   ionViewWillEnter(){
     this.major=this.navParams.get("major");
-    this.Friendrest.getFriendsList().subscribe(data=>{
-        this.Friends=data.filter(Friend =>Friend.major === this.major)
+    this.friendrest.getFriendsList().subscribe(data=>{
+        this.friends=data.filter(friend =>friend.major === this.major)
     });
   }
-
+  goBack(){
+    this.navCtrl.pop();
+  }
   showDetail(studentID:number){
     this.navCtrl.push(FriendDetailPage,
       {studentID:studentID}
       );
   }
-  goBack(){
-    this.navCtrl.pop();
-  }
+  
 }

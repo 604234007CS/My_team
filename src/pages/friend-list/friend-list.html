@@ -2,13 +2,13 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>friend-list</ion-title>
+    <ion-title>Friend-List</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 <ion-content padding>
-  <ion-list *ngIf="Friends">
+  <ion-list *ngIf="friends">
     <ion-item *ngFor="let friend of friends" text-wrap>
       <ion-thumbnail item-start>
         <img src='{{friend.picture}}'>
