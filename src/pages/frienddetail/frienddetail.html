@@ -14,24 +14,12 @@
               <img  height="200px" src="{{ friend.picture }}" />
       
               <ion-list >
-                  <ion-item>                
-                      <strong>Name:</strong>   {{ friend.firstName }}           
-                  </ion-item>
-                  <ion-item>                
-                    <strong>Lastname:</strong>   {{ friend.lastName }}           
-                </ion-item>
-                  <ion-item>
-                      <strong>NickName:</strong>  {{ friend.nickName}}
-                  </ion-item>
-                  <ion-item>
-                    <strong>faculty:</strong>  {{ friend.faculty}}
-                </ion-item>
-                <ion-item>
-                  <strong>major:</strong>  {{ friend.major}}
-              </ion-item>
-              <ion-item>
-                <strong>birthday:</strong>  {{ friend.birthday|date:'dd/MM/yyyy'}}
-            </ion-item>
+                  <ion-item><strong>Name:</strong>{{ friend.firstName }}</ion-item>
+                  <ion-item><strong>Lastname:</strong>{{ friend.lastName }}</ion-item>
+                  <ion-item><strong>NickName:</strong>{{ friend.nickName}}</ion-item>
+                  <ion-item><strong>faculty:</strong>{{ friend.faculty}}</ion-item>
+                  <ion-item><strong>major:</strong>{{ friend.major}}</ion-item>
+                  <ion-item><strong>birthday:</strong>  {{ friend.birthday|date:'dd/MM/yyyy'}}</ion-item>
               </ion-list>
               
               <button ion-button full color="dark" (click)="goBack()" >

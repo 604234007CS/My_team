@@ -12,7 +12,7 @@ import { Friend } from '../../model/modelfriend';
 @Injectable()
 export class FriendrestProvider {
 
-  private url:string="https://raw.githubusercontent.com/604234007CS/My_team/master/student.json"
+  private url:string="https://raw.githubusercontent.com/604234007CS/My_team/master/student%20(1).json"
 
   constructor(public http: HttpClient) {
     console.log('Hello FriendrestProvider Provider');
