@@ -1,30 +1,30 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { Friend } from '../../models/model';
-import { FriendRestProvider } from '../../providers/friendrest/friendrest';
+import { Friend } from '../../model/modelfriend';
+import { FriendrestProvider } from '../../providers/friendrest/friendrest';
 
 /**
- * Generated class for the FriendDetailPage page.
+ * Generated class for the FrienddetailPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
 
 @Component({
-  selector: 'page-friend-detail',
-  templateUrl: 'friend-detail.html',
+  selector: 'page-frienddetail',
+  templateUrl: 'frienddetail.html',
 })
-export class FriendDetailPage {
+export class FrienddetailPage {
 
   studentID:number;
   friend:Friend;
 
-  constructor(public Friendrest:FriendRestProvider,public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public friendrest:FriendrestProvider ,public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewillEnter(){
+  ionViewWillEnter(){
     this.studentID=this.navParams.get("studentID");
-    this.Friendrest.getFriendsList().subscribe(data=>{
+    this.friendrest.getFriendlist().subscribe(data=>{
       this.friend=data.filter(friend => friend.studentID === this.studentID)[0];
     });
   }
@@ -33,7 +33,7 @@ export class FriendDetailPage {
     this.studentID=this.navParams.get("studentID");
     console.log(this.studentID);
   }
-  
+
   goBack(){
     this.navCtrl.pop();
   }
