@@ -1,0 +1,32 @@
+[
+  {
+    "studentID": "604234007",
+    "firstName": "Suwaibah",
+    "lastName": "Wani",
+    "nickName": "Bah",
+    "faculty" :"Science And Technology",
+    "major": "ComputerScience",
+    "birthday": "1999-05-10",
+    "picture" : "https://raw.githubusercontent.com/604234007CS/My_team/master/Bah.jpg"
+  },
+  {
+    "studentID": "604234008",
+    "firstName": "Danai",
+    "lastName": "Jaroenpapakdeesakul",
+    "nickName": "Kan",
+    "faculty" :"Science And Technology",
+    "major": "ComputerScience",
+    "birthday": "1994-04-13",
+    "picture" : "https://raw.githubusercontent.com/604234007CS/My_team/master/Kan.jpg" 
+  },
+  {
+    "studentID": "604234017",
+    "firstName": "Fatimah",
+    "lastName": "Sa-ah",
+    "nickName": "Far",
+    "faculty" :"Science And Technology",
+    "major": "ComputerScience",
+    "birthday": "1998-07-08",
+    "picture" : "https://raw.githubusercontent.com/604234007CS/My_team/master/Far.jpg"
+  }
+ ]
